@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
 
-import 'home_screen.dart';
+import 'bottom_navigate_bar.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -107,8 +107,10 @@ class _LoginScreenState extends State<LoginScreen> {
                     Fluttertoast.showToast(msg: Constants.ENTER_PASSWORD);
                     return;
                   } else {
-                    Navigator.pushReplacement(context,
-                        MaterialPageRoute(builder: (_) => const HomeScreen()));
+                    Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                            builder: (_) => const BottomNavigateBarScreen()));
                   }
                 },
                 child: Row(
